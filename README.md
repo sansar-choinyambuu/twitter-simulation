@@ -6,9 +6,9 @@ twitter-simulation
 
 # Usage
 
-Home account can be configured using config.json
-Tweets can be added in tweets.json, last added first shown
-A click on "Tweet" button refreshes the tweets and plays tweet sound
+- Home account can be configured using config.json
+- Tweets can be added in tweets.json, last added first shown
+- A click on "Tweet" button refreshes the tweets and plays tweet sound
 
 # References
 

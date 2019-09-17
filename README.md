@@ -10,7 +10,11 @@ twitter-simulation
 - Tweets can be added in tweets.json, last added first shown
 - A click on "Tweet" button refreshes the tweets and plays tweet sound
 
-# References
+# Requirement
+Same origin policy in your browser must be disabled, for twitter-simulation to run smoothly.
+- Chrome -> 'chromium-browser --disable-web-security --user-data-dir="[some directory here]"'
+- FireFox -> about:config - 'security.fileuri.strict_origin_policy = false'
+- Internet Explorer -> tools - Internet Options - Security - 'Internet' security zone - Custom level - Miscellaneous - enable "Access data sources across domain"  
 
 Some pretty cool references/credits to people I got inspired by with their project: 
 

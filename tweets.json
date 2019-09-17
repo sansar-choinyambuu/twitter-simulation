@@ -1,0 +1,48 @@
+{
+    "tweets": [
+        {
+            "Id": 1,
+            "TweetProfile": "Nelson Mandela",
+            "TweetAccount": "@mandela",
+            "TweetProfilePic": "media\\twitter.jpg",
+            "DateTime": "2019-09-16 19:46:43",
+            "Tweet": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+            "ReplyCount": "10k",
+            "RetweetCount": "10",
+            "LoveCount": "999"
+        },
+        {
+            "Id": 2,
+            "TweetProfile": "Walt Disney",
+            "TweetAccount": "@disney",
+            "TweetProfilePic": "media\\twitter.jpg",
+            "DateTime": "2019-09-16 19:46:43",
+            "Tweet": "The way to get started is to quit talking and begin doing",
+            "ReplyCount": "5",
+            "RetweetCount": "10",
+            "LoveCount": "50"
+        },
+        {
+            "Id": 3,
+            "TweetProfile": "Steve Jobs",
+            "TweetAccount": "@jobs",
+            "TweetProfilePic": "media\\twitter.jpg",
+            "DateTime": "2019-09-16 19:46:43",
+            "Tweet": "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
+            "ReplyCount": "587",
+            "RetweetCount": "103",
+            "LoveCount": "54"
+        },
+        {
+            "Id": 4,
+            "TweetProfile": "James Cameron",
+            "TweetAccount": "@cameron",
+            "TweetProfilePic": "media\\twitter.jpg",
+            "DateTime": "2019-09-16 19:46:43",
+            "Tweet": "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. <a href=\"https://en.wikipedia.org/wiki/James_Cameron\">James Cameron's Bio</a>",
+            "ReplyCount": "1",
+            "RetweetCount": "2",
+            "LoveCount": "34"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "HomeProfile": "Barack Obama",
+    "HomeAccount": "@BarackObama",
+    "HomeProfilePic": "media\\obama.jpg",
+    "HomeBannerPic": "media\\obama_banner.jpg",
+    "Bio": "Dad, husband, President, citizen.",
+    "Following": "612k",
+    "Followers": "108.5M",
+    "Trends": [
+        "#Switzerland",
+        "#Saudi",
+        "#Apple",
+        "#HuaWei"
+    ],
+    "WhoToFollow": [
+        {
+            "Profile": "Donald J.Trump",
+            "ProfilePic": "media\\trump.jpg",
+            "Account": "@realDonalTrump"
+        },
+        {
+            "Profile": "Neue Zürcher Zeitung",
+            "ProfilePic": "media\\nzz.jpg",
+            "Account": "@NZZ"
+        },
+        {
+            "Profile": "InsideParadeplatz",
+            "ProfilePic": "media\\insideparade.jpg",
+            "Account": "@InsideParade"
+        }
+    ]
+}

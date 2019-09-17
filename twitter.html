@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Twitter / Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        .nav-pills-custom>li>a {
+            color: #8aa2b6;
+        }
+
+        .nav-pills-custom>li>a:focus,
+        .nav-pills-custom>li>a:hover {
+            background: none;
+            color: #1da1f2;
+        }
+
+        .panel-heading {
+            background: #ffffff;
+            border-bottom: none;
+            color: #1da1f2;
+            background-color: #e6ecf0;
+        }
+
+        .panel-body {
+            background: #ffffff;
+        }
+
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a:focus,
+        .navbar-default .navbar-nav>.active>a:hover {
+            background-color: #d9edf7;
+        }
+
+        .form-control-nav {
+            background-color: #F0FFFF;
+            border: lightgrey solid 1px;
+            border-radius: 15px;
+        }
+
+        body {
+            background-color: #e6ecf0;
+            color: #14171a;
+            font: 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+        }
+
+        .navbar-default .navbar-collapse,
+        .navbar-default {
+            background-color: white;
+        }
+
+        .panel-footer {
+            background-color: #ffffff;
+        }
+
+        .well {
+            background-color: #e6ecf0;
+        }
+
+        a {
+            color: rgba(29, 161, 242, 1.00);
+        }
+
+        .form-control-feedback {
+            line-height: 27px;
+        }
+
+        .panel-info {
+            border: 1px lightgrey solid;
+        }
+
+        .tweet {
+            border-bottom: #e6ecf0 solid 1px;
+            border-spacing: 1px
+        }
+
+        .profile-img {
+            bottom: 0px;
+            height: 80px;
+            left: 0px;
+            opacity: 100;
+            position: absolute;
+            right: 0px;
+            top: 15px;
+            width: 80px;
+            z-index: 1;
+            border-radius: 50%;
+            border: white solid 5px;
+        }
+
+        .tweet-img {
+            bottom: 0px;
+            height: 50px;
+            left: 0px;
+            opacity: 100;
+            position: relative;
+            right: 0px;
+            top: 0px;
+            width: 50px;
+            z-index: 1;
+            border-radius: 50%;
+            border: white solid 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-collapse navbar-collapse-1 collapse" aria-expanded="true">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#fake"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
+                    <li>
+                        <a href="#fake"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
+                    </li>
+                    <li>
+                        <a href="#fake"><span class="glyphicon glyphicon-envelope"></span> Messages</a>
+                    </li>
+                </ul>
+                <div class="navbar-form navbar-right">
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control-nav" id="search" aria-describedby="search1">
+                        <a href="#fake"><span class="glyphicon glyphicon-search"></span></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <a href="#">
+                            <img class="img-responsive" alt="" src="" id="HomeBannerPic">
+                            <img alt="" src="" class="profile-img" id="HomeProfilePic">
+                        </a>
+                        <div class="row" style="padding : 10px">
+                            <b id="HomeProfile"></b><span id="HomeAccount">/span>
+                        </div>
+                        <div class="row" style="padding : 10px">
+                            <span id="Bio"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <h5>
+                                    <small>FOLLOWING</small>
+                                    <a href="#" id="Following"></a>
+                                </h5>
+                            </div>
+                            <div class="col-xs-5">
+                                <h5>
+                                    <small>FOLLOWERS</small>
+                                    <a href="#" id="Followers"></a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default panel-custom">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Trends for you
+                        </h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <ul class="list-unstyled" id="Trends">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="media">
+                            <a class="media-left" href="#fake">
+                                <img alt="" class="tweet-img" src="" id="HomeTopProfilePic">
+                            </a>
+                            <div class="media-body">
+                                <div class="form-group has-feedback">
+                                    <div class="row">
+                                        <div class="col-sm-9"> <input type="text" class="form-control"
+                                                aria-describedby="search" value="What's happening"></input></div>
+
+                                        <button class="btn btn-primary" type="submit" onclick="load_tweets()">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"> </span> Tweet
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" id="TweetsContainer">
+                        <div class="media tweet" id="TweetTemplate" hidden=true>
+                            <a class="media-left" href="#fake">
+                                <img alt="" class="tweet-img" src="" id="TweetProfilePic">
+                            </a>
+                            <div class="media-body">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <span class="media-heading" id="TweetProfile"></span>
+                                        <small id="TweetAccount"></small>
+                                    </div>
+                                    <div class="col-sm-4"><small id="DateTime"></small></div>
+                                </div>
+                                <span id="Tweet"></span>
+                                <div class="row">
+                                    <ul class="nav nav-pills nav-pills-custom">
+                                        <li><a href="#"><span class="glyphicon glyphicon-comment">
+                                                    <span id="ReplyCount"></span>
+                                                </span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-retweet">
+                                                    <span id="RetweetCount"></span>
+                                                </span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-heart">
+                                                    <span id="LoveCount"></span>
+                                                </span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-option-horizontal"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="panel panel-default panel-custom">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Who to follow
+                            <small><a href="#">Refresh</a> <a href="#">View all</a></small>
+                        </h3>
+                    </div>
+                    <div class="panel-body" id="WhoToFollowContainer">
+                        <div class="media" id="WhoToFollowTemplate" hidden=true>
+                            <div class="media-left">
+                                <img src="" alt="" class="tweet-img" id="ProfilePic">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><b id="Profile"></b>
+                                    <span id="Account"></span>
+                                    <a href="#" class="btn btn-default btn-xs">
+                                        +
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        Follow
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="www.google.com">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Find people you know
+                        </a>
+                    </div>
+                </div>
+                <div class="well well-sm">
+                    <ul class="list-inline">
+                        <li>© 2019 Twitter</li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Ads info</a></li>
+                        <li><a href="#">Brand</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Apps</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Businesses</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function show_tweet(data) {
+                clone = $('#TweetTemplate').first().clone();
+                for (var key in data) {
+                    element = $(clone).find('#' + key)
+                    if (element.is("img")) element.attr("src", data[key])
+                    else element.html(data[key]);
+                }
+                clone.attr("hidden", false);
+                $('#TweetsContainer').prepend(clone);
+            }
+
+            function play_audio() {
+                var audio = new Audio('media\\tweet.mp3');
+                audio.play();
+            }
+
+            var loaded_tweets = new Set();
+
+            function load_tweets() {
+                $.getJSON('tweets.json', function (data) {
+                    data.tweets.forEach(function (tweet, index) {
+                        if (!loaded_tweets.has(tweet.Id)) {
+                            show_tweet(tweet);
+                            play_audio();
+                            loaded_tweets.add(tweet.Id);
+                        }
+                    });
+                });
+            }
+
+            function load_config() {
+                $.getJSON('config.json', function (data) {
+
+                    $("#HomeProfile").html(data.HomeProfile);
+                    $("#HomeAccount").html(data.HomeAccount);
+                    $("#HomeProfilePic").attr("src", data.HomeProfilePic);
+                    $("#HomeBannerPic").attr("src", data.HomeBannerPic);
+                    $("#HomeTopProfilePic").attr("src", data.HomeProfilePic);
+                    $("#Bio").html(data.Bio);
+                    $("#Following").html(data.Following);
+                    $("#Followers").html(data.Followers);
+
+                    data.Trends.forEach(function (trend, index) {
+                        $("#Trends").append("<li><a>" + trend + "</a></li>")
+                    });
+
+                    data.WhoToFollow.forEach(function (whotofollow, index) {
+                        clone = $('#WhoToFollowTemplate').first().clone();
+                        for (var key in whotofollow) {
+                            element = $(clone).find('#' + key)
+                            if (element.is("img")) element.attr("src", whotofollow[key])
+                            else element.html(whotofollow[key]);
+                        }
+                        clone.attr("hidden", false);
+                        $('#WhoToFollowContainer').append(clone);
+                    });
+                });
+            }
+
+            $(document).ready(function () {
+                load_config();
+                load_tweets();
+            });
+
+        </script>
+</body>
+
+</html>

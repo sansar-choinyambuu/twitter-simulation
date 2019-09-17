@@ -23,4 +23,4 @@ Feel free if you want to contribute, clone, fork, submit your PR and so on.
 
 # License
 
-DET is licensed under a [MIT License](https://opensource.org/licenses/MIT).
+twitter-simulation is licensed under a [MIT License](https://opensource.org/licenses/MIT).

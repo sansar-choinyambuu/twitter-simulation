@@ -16,6 +16,7 @@ Same origin policy in your browser must be disabled, for twitter-simulation to r
 - FireFox -> about:config - 'security.fileuri.strict_origin_policy = false'
 - Internet Explorer -> tools - Internet Options - Security - 'Internet' security zone - Custom level - Miscellaneous - enable "Access data sources across domain"  
 
+# References
 Some pretty cool references/credits to people I got inspired by with their project: 
 
 - [twitter layout](https://codepen.io/Gi_18/pen/xwVJKg) from Giada Cantarutti

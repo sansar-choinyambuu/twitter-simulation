@@ -28,5 +28,6 @@
             "ProfilePic": "media\\insideparade.jpg",
             "Account": "@InsideParade"
         }
-    ]
+    ],
+    "TweetAudio" : "media\\rooster.mp3"
 }

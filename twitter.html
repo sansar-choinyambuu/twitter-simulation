@@ -308,8 +308,9 @@
                 $('#TweetsContainer').prepend(clone);
             }
 
+            audio_file = 'media\\tweet.mp3'
             function play_audio() {
-                var audio = new Audio('media\\rooster.mp3');
+                var audio = new Audio(audio_file);
                 audio.play();
             }
 
@@ -353,6 +354,8 @@
                         clone.attr("hidden", false);
                         $('#WhoToFollowContainer').append(clone);
                     });
+
+                    audio_file = data.TweetAudio;
                 });
             }
 

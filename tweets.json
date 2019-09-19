@@ -42,7 +42,7 @@
             "TweetAccount": "@cameron",
             "TweetProfilePic": "media\\twitter.jpg",
             "DateTime": "2019-09-16 19:46:43",
-            "Tweet": "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. <a href=\"https://en.wikipedia.org/wiki/James_Cameron\">James Cameron's Bio</a>",
+            "Tweet": "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. <a href=\"https://en.wikipedia.org/wiki/James_Cameron\" target=\"blank\">James Cameron's Bio</a>",
             "ReplyCount": "1",
             "RetweetCount": "2",
             "LoveCount": "34",

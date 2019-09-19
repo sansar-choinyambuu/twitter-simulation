@@ -9,7 +9,8 @@
             "Tweet": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
             "ReplyCount": "10k",
             "RetweetCount": "10",
-            "LoveCount": "999"
+            "LoveCount": "999",
+            "Delay": 0
         },
         {
             "Id": 2,
@@ -20,7 +21,8 @@
             "Tweet": "The way to get started is to quit talking and begin doing",
             "ReplyCount": "5",
             "RetweetCount": "10",
-            "LoveCount": "50"
+            "LoveCount": "50",
+            "Delay": 0
         },
         {
             "Id": 3,
@@ -31,7 +33,8 @@
             "Tweet": "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
             "ReplyCount": "587",
             "RetweetCount": "103",
-            "LoveCount": "54"
+            "LoveCount": "54",
+            "Delay": 0
         },
         {
             "Id": 4,
@@ -42,7 +45,8 @@
             "Tweet": "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. <a href=\"https://en.wikipedia.org/wiki/James_Cameron\">James Cameron's Bio</a>",
             "ReplyCount": "1",
             "RetweetCount": "2",
-            "LoveCount": "34"
+            "LoveCount": "34",
+            "Delay": 3
         }
     ]
 }

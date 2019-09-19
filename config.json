@@ -1,10 +1,11 @@
 {
+    "TweetAudio": "media\\rooster.mp3",
     "HomeProfile": "Barack Obama",
     "HomeAccount": "@BarackObama",
     "HomeProfilePic": "media\\obama.jpg",
     "HomeBannerPic": "media\\obama_banner.jpg",
     "Bio": "Dad, husband, President, citizen.",
-    "Following": "612k",
+    "Following": "612K",
     "Followers": "108.5M",
     "Trends": [
         "#Switzerland",
@@ -28,6 +29,5 @@
             "ProfilePic": "media\\insideparade.jpg",
             "Account": "@InsideParade"
         }
-    ],
-    "TweetAudio" : "media\\rooster.mp3"
+    ]
 }

@@ -302,13 +302,25 @@
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
         <script type="text/javascript">
-            function show_tweet(data) {
+            function show_tweet(tweet) {
+                // clone the tweet template
                 clone = $('#TweetTemplate').first().clone();
-                for (var key in data) {
-                    element = $(clone).find('#' + key)
-                    if (element.is("img")) element.attr("src", data[key])
-                    else element.html(data[key]);
+
+                $(clone).find('#DateTime').html(new Date().toLocaleString());
+
+                // All attributes from json
+                for (var key in tweet) {
+                    element = $(clone).find('#' + key);
+                    if (element.is("img")) element.attr("src", tweet[key]);
+                    else element.html(tweet[key]);
                 }
+
+                // Tweet reactions
+                if (!('ReplyCount' in tweet)) $(clone).find('#ReplyCount').html(Math.floor(Math.random() * 101));
+                if (!('RetweetCount' in tweet)) $(clone).find('#RetweetCount').html(Math.floor(Math.random() * 101));
+                if (!('LoveCount' in tweet)) $(clone).find('#LoveCount').html(Math.floor(Math.random() * 101));
+
+                // Newest tweets on top
                 $('#TweetsContainer').prepend(clone);
             }
 
@@ -321,12 +333,14 @@
                 $.getJSON('tweets.json', function (data) {
                     loadedTweets = JSON.parse(localStorage.getItem('loadedTweets'));
                     data.tweets.forEach(function (tweet, index) {
-                        if (!loadedTweets.includes(tweet.Id)) {
+                        id = JSON.stringify(tweet);
+                        delay = 'Delay' in tweet ? tweet.Delay : 0;
+                        if (!loadedTweets.includes(id)) {
                             setTimeout(function () {
                                 show_tweet(tweet);
                                 play_audio();
-                            }, tweet.Delay * 1000);
-                            loadedTweets.push(tweet.Id);
+                            }, delay * 1000);
+                            loadedTweets.push(id);
                         }
                     });
                     localStorage.setItem('loadedTweets', JSON.stringify(loadedTweets));
@@ -353,6 +367,7 @@
 
                     $("#WhoToFollowContainer").empty();
                     data.WhoToFollow.forEach(function (whotofollow, index) {
+                        // clone the who to follow template
                         clone = $('#WhoToFollowTemplate').first().clone();
                         for (var key in whotofollow) {
                             element = $(clone).find('#' + key)

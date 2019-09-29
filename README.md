@@ -6,9 +6,20 @@ twitter-simulation
 
 # Usage
 
-- Home account can be configured using config.json
-- Tweets can be added in tweets.json, last added first shown
-- A click on "Tweet" button refreshes the tweets and plays tweet sound
+* Home account can be configured using config.json
+** Profile name, @handle, profile picture, bio, banner picture, following and followers count
+** Trends
+** Who to follow
+
+* Tweets can be added in tweets.json
+** Last added, first shown
+** Twitter account's name, @handle should be configured
+** Twitter profile picture can be configured
+** Actual tweet text should be configured, html is supported. Quotes need to be escaped in for html.
+** Optional - Reply, retweet and love counts [default random 0-100]
+** Optional - Delay in seconds [default 0]
+
+* A click on "Tweet" button refreshes the tweets and plays tweet sound
 
 # Requirement
 Same origin policy in your browser must be disabled, for twitter-simulation to run smoothly.
